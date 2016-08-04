@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Clearing Floats</h1>
+        <p>Tony Aslett &amp; Nicholas Gallagher recommended way of clearing floats</p>
+    </header>
+    <section class="example group">
+        <img src="images/gnasher.jpg" />
+        <p>When we float an element, the browser takes that element from the document flow and pushes it to the edge of its parent container.</p>
+    </section>
+    <section class="code">
+        <h1>HTML</h1>
+        <pre class="language-html">
+            <code>
+                &lt;article class=&quot;group&quot;&gt;
+                    &lt;img src=&quot;images/gnasher.jpg&quot; /&gt;
+                    &lt;p&gt;When we float an element, the browser takes .&lt;/p&gt;
+                &lt;/article&gt;                
+            </code>
+        </pre>
+        <h1>CSS</h1>
+        <pre class="language-css">
+            <code>
+                .group:before,
+                .group:after {
+                    content: "";
+                    display: table;
+                }
+
+                .group:after {
+                    clear:both;
+                }
+
+                .group {
+                    zoom: 1; /* IE6/IE7 */
+                }
+            </code>        
+        </pre>
+    </section>
+</body>
+
+</html>
