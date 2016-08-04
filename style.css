@@ -1,0 +1,45 @@
+html {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+img {
+    float: left;
+    box-shadow: 1px 1px 2px #000;
+    margin: 10px 10px 10px 10px;
+}
+
+section h1 {
+    font-size: 22px;
+}
+
+.example {
+    color: #000;
+    margin: 0 auto;
+    width: 40%;
+    padding: 10px;
+    background-color: #f5f2f0;
+    border: 1px solid #eee;
+}
+
+
+/* The Actual interesting CSS */
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;/* IE6 & IE7 */
+}
